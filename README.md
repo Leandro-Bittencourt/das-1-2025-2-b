@@ -3,7 +3,7 @@
 ## Aula 31/07
 
 ### Princípios de projeto de código  
-Os princípios de projeto de código ajudam a criar sistemas mais organizados, legíveis, reutilizáveis e fáceis de manter. Um bom projeto de código leva em conta aspectos como simplicidade, legibilidade, modularidade, reutilização e facilidade de testes. Entre os princípios mais importantes estão: separação de responsabilidades, baixo acoplamento, alta coesão, e a aplicação de boas práticas como SOLID.
+Os princípios de projeto de código ajudam a criar sistemas mais organizados, legíveis, reutilizáveis e fáceis de manter. Um bom projeto de código leva em conta aspectos como simplicidade, legibilidade, modularidade, reutilização e facilidade de testes. Entre os princípios mais importantes estão: separação de responsabilidades, baixo acoplamento e alta coesão.
 
 ### Padronização de código  
 A padronização de código é a definição e adoção de um conjunto de regras de estilo e convenções de escrita no desenvolvimento de software. Ela facilita a leitura, manutenção e colaboração entre desenvolvedores, reduzindo ambiguidades. Exemplos incluem convenções de nomes, organização de arquivos, uso de indentação, comentários e formatação. Ferramentas como ESLint, Prettier, EditorConfig, entre outras, ajudam a automatizar essa padronização.
@@ -16,19 +16,53 @@ O ocultamento de informação (ou encapsulamento) é um princípio fundamental d
 ## Aula 04/08
 
 ### Coesão  
-Coesão é o grau em que os elementos de um módulo ou classe estão relacionados entre si e colaboram para realizar uma única tarefa bem definida. Um módulo com alta coesão é mais fácil de entender, testar e manter, pois concentra-se em uma única responsabilidade. Já a baixa coesão geralmente indica que a classe está fazendo "coisas demais", o que pode levar a código desorganizado e difícil de alterar.
+Atributo/Caracteristica que buscamos em nosso sistema, toda a classe deve atribuir uma única função ou serviço.
+
+Vantagens da Coesão:
+- Facilita a implementação de uma classe, bem como o seu entendimento ou manutenção.
+- Facilita a alocação de um único responsável por manter uma classe.
+- Facilita o reuso e teste de uma classe.
 
 ### Acoplamento  
-Acoplamento se refere ao nível de dependência entre módulos ou classes. Um bom projeto busca baixo acoplamento, ou seja, que as partes do sistema possam ser alteradas com o mínimo de impacto nas outras. O alto acoplamento indica dependência excessiva, o que dificulta mudanças, testes e reutilização. Um sistema com módulos bem acoplados é mais frágil e menos flexível.
+Acoplamento é o grau de dependência entre duas classes.
+
+Acoplamento aceitável ocorre quando uma classe usa apenas métodos públicos estáveis de outra.
+
+Acoplamento ruim acontece quando há acesso direto a dados internos, uso de variáveis globais compartilhadas ou interfaces instáveis.
+
+O objetivo é maximizar a coesão (foco único da classe) e minimizar o acoplamento (dependências controladas).
+
+Acoplamento estrutural é a referência direta entre classes; acoplamento evolutivo é quando mudanças em uma classe afetam outra sem referência direta.
+
+Exemplo: evitar que uma classe acesse diretamente um arquivo usado por outra, preferindo comunicação via métodos públicos estáveis.
+
+Acoplamento é necessário, mas deve ser bem gerenciado para evitar problemas de manutenção e propagação de erros.
+
 
 ### SOLID  
-SOLID é um acrônimo para cinco princípios fundamentais da programação orientada a objetos, criados para tornar o software mais compreensível, flexível e de fácil manutenção:
+Princípios ajudam a criar software fácil de manter e evoluir.
 
-- **S — Single Responsibility Principle (Princípio da Responsabilidade Única):** Uma classe deve ter apenas um motivo para mudar.
-- **O — Open/Closed Principle (Princípio Aberto/Fechado):** O código deve estar aberto para extensão, mas fechado para modificação.
-- **L — Liskov Substitution Principle (Princípio da Substituição de Liskov):** Subclasses devem poder ser substituídas por suas superclasses sem alterar o comportamento esperado.
-- **I — Interface Segregation Principle (Princípio da Segregação de Interface):** Uma classe não deve ser forçada a depender de interfaces que não utiliza.
-- **D — Dependency Inversion Principle (Princípio da Inversão de Dependência):** Dependa de abstrações, não de implementações.
+Os 5 princípios SOLID são:
 
-Esses princípios ajudam a construir sistemas mais robustos, desacoplados e fáceis de evoluir.
+Responsabilidade Única
+
+Aberto/Fechado
+
+Substituição de Liskov
+
+Segregação de Interfaces
+
+Inversão de Dependências
+
+Responsabilidade Única (SRP)
+
+Cada classe deve ter apenas um motivo para mudar.
+
+Separe regras de negócio da interface.
+
+Segregação de Interfaces (ISP)
+
+Interfaces devem ser pequenas e específicas para cada cliente.
+
+Evita que clientes dependam de métodos que não usam.
 
