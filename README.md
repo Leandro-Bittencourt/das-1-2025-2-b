@@ -24,25 +24,25 @@ Vantagens da Coesão:
 - Facilita o reuso e teste de uma classe.
 
 ### Acoplamento  
-Acoplamento é o grau de dependência entre duas classes.
+- Acoplamento é o grau de dependência entre duas classes.
 
-Acoplamento aceitável ocorre quando uma classe usa apenas métodos públicos estáveis de outra.
+- Acoplamento aceitável ocorre quando uma classe usa apenas métodos públicos estáveis de outra.
 
-Acoplamento ruim acontece quando há acesso direto a dados internos, uso de variáveis globais compartilhadas ou interfaces instáveis.
+- Acoplamento ruim acontece quando há acesso direto a dados internos, uso de variáveis globais compartilhadas ou interfaces instáveis.
 
-O objetivo é maximizar a coesão (foco único da classe) e minimizar o acoplamento (dependências controladas).
+- O objetivo é maximizar a coesão (foco único da classe) e minimizar o acoplamento (dependências controladas).
 
-Acoplamento estrutural é a referência direta entre classes; acoplamento evolutivo é quando mudanças em uma classe afetam outra sem referência direta.
+- Acoplamento estrutural é a referência direta entre classes; acoplamento evolutivo é quando mudanças em uma classe afetam outra sem referência direta.
 
-Exemplo: evitar que uma classe acesse diretamente um arquivo usado por outra, preferindo comunicação via métodos públicos estáveis.
+- Exemplo: evitar que uma classe acesse diretamente um arquivo usado por outra, preferindo comunicação via métodos públicos estáveis.
 
-Acoplamento é necessário, mas deve ser bem gerenciado para evitar problemas de manutenção e propagação de erros.
+- Acoplamento é necessário, mas deve ser bem gerenciado para evitar problemas de manutenção e propagação de erros.
 
 
 ### SOLID  
-Princípios ajudam a criar software fácil de manter e evoluir.
+- Princípios ajudam a criar software fácil de manter e evoluir.
 
-Os 5 princípios SOLID são:
+- Os 5 princípios SOLID são:
 
 Responsabilidade Única
 
@@ -54,15 +54,15 @@ Segregação de Interfaces
 
 Inversão de Dependências
 
-Responsabilidade Única (SRP)
+- Responsabilidade Única (SRP)
 
-Cada classe deve ter apenas um motivo para mudar.
+  Cada classe deve ter apenas um motivo para mudar.
 
-Separe regras de negócio da interface.
+- Separe regras de negócio da interface.
 
-Segregação de Interfaces (ISP)
+- Segregação de Interfaces (ISP)
 
-Interfaces devem ser pequenas e específicas para cada cliente.
+- Interfaces devem ser pequenas e específicas para cada cliente.
 
-Evita que clientes dependam de métodos que não usam.
+- Evita que clientes dependam de métodos que não usam.
 
