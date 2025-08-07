@@ -40,29 +40,23 @@ Vantagens da Coesão:
 
 
 ### SOLID  
-- Princípios ajudam a criar software fácil de manter e evoluir.
+Os princípios SOLID são um conjunto de cinco princípios fundamentais de projeto de software que ajudam a criar sistemas mais manuteníveis, flexíveis e robustos.
 
-- Os 5 princípios SOLID são:
+A sigla SOLID representa:
 
-Responsabilidade Única
+S – Single Responsibility Principle (Princípio da Responsabilidade Única)
 
-Aberto/Fechado
+O – Open/Closed Principle (Princípio Aberto/Fechado)
 
-Substituição de Liskov
+L – Liskov Substitution Principle (Princípio da Substituição de Liskov)
 
-Segregação de Interfaces
+I – Interface Segregation Principle (Princípio da Segregação de Interfaces)
 
-Inversão de Dependências
+D – Dependency Inversion Principle (Princípio da Inversão de Dependências)
 
-- Responsabilidade Única (SRP)
+Esses princípios orientam soluções que não só resolvem problemas, mas também facilitam a manutenção e evolução do software ao longo do tempo.
 
-  Cada classe deve ter apenas um motivo para mudar.
+Aplicar os princípios SOLID ajuda a evitar sistemas com código difícil de modificar, reduzindo riscos e custos em manutenções futuras.
 
-- Separe regras de negócio da interface.
-
-- Segregação de Interfaces (ISP)
-
-- Interfaces devem ser pequenas e específicas para cada cliente.
-
-- Evita que clientes dependam de métodos que não usam.
+Eles são essenciais para lidar com a mudança frequente de requisitos e tecnologias em projetos de software.
 
