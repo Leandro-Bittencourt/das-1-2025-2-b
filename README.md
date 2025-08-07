@@ -38,6 +38,9 @@ Vantagens da Coesão:
 
 - Acoplamento é necessário, mas deve ser bem gerenciado para evitar problemas de manutenção e propagação de erros.
 
+---
+
+## Aula 07/08
 
 ### SOLID  
 Os princípios SOLID são um conjunto de cinco princípios fundamentais de projeto de software que ajudam a criar sistemas mais manuteníveis, flexíveis e robustos.
