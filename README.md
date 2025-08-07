@@ -44,19 +44,23 @@ Os princípios SOLID são um conjunto de cinco princípios fundamentais de proje
 
 A sigla SOLID representa:
 
-S – Single Responsibility Principle (Princípio da Responsabilidade Única)
+S single Responsibility Principle
+O open/Closed Principle
+L liskov Substitution Principle
+I interface Segregation Principle
+D dependency Inversion Principle
 
-O – Open/Closed Principle (Princípio Aberto/Fechado)
+- Princípio da Responsabilidade Única -  Cada classe deve ter apenas uma responsabilidade, aumentando a coesão. Deve existir um único motivo para modificar qualque classe em um sistema. Um corolário desse princípio recomenda separar apresentação de regras de negócio.
+- Princípio da Segregação de Interfaces - aso particular de Responsabilidade Única com foco em interfaces. O princípio define que interfaces têm que ser pequenas, coesas e, mais importante ainda, específicas para cada tipo de cliente. O objetivo é evitar que clientes dependam de interfaces com métodos que eles não vão usar.
+- Princípio de Inversão de Dependências - Esse princípio recomenda que uma classe cliente deve estabelecer dependências prioritariamente com abstrações e não com implementações concretas, pois abstrações (isto é, interfaces) são mais estáveis do que implementações concretas (isto é, classes). A ideia é então trocar (ou inverter) as dependências: em vez de depender de classes concretas, clientes devem depender de interfaces. Portanto, um nome mais intuitivo para o princípio seria Prefira Interfaces a Classes.
+- Prefira Composição a Herança - O princípio "Prefira Composição a Herança" recomenda usar composição em vez de herança para evitar forte acoplamento e expor detalhes internos, facilitando a manutenção e flexibilidade do código. Por exemplo, uma pilha deve conter uma lista internamente (composição), não herdar dela. Composição permite trocar implementações em tempo de execução e preserva melhor o encapsulamento, enquanto herança pode causar problemas. Linguagens modernas como Go e Rust seguem essa ideia, não oferecendo herança de classes.
+- Princípio de Demeter - O Princípio de Demeter, ou Lei do Menor Conhecimento, recomenda que um método só deve chamar métodos de sua própria classe, de objetos passados como parâmetro, de objetos que cria, ou de seus atributos, evitando chamar métodos em objetos obtidos por chamadas encadeadas.
+- Princípio Aberto/Fechado - O Princípio Aberto/Fechado diz que classes devem permitir extensões sem que seu código original precise ser modificado. Isso facilita a manutenção e a evolução do software, como no caso da classe Collections do Java, que permite diferentes formas de ordenação sem alterar seu código. Já códigos que exigem mudanças para cada novo tipo violam esse princípio.
+- Princípio de Substituição de Liskov - O Princípio de Substituição de Liskov estabelece que subclasses devem poder substituir suas classes base sem alterar o comportamento esperado dos métodos herdados. Ou seja, métodos redefinidos nas subclasses devem respeitar o contrato original da classe base para garantir que clientes que usam objetos da classe base funcionem corretamente também com objetos das subclasses. Violações ocorrem quando, por exemplo, uma subclasse restringe o domínio de um método ou altera sua semântica, como no caso em que uma soma de inteiros é substituída por uma concatenação de strings, causando resultados inesperados e quebrando a previsibilidade do código.
+  
 
-L – Liskov Substitution Principle (Princípio da Substituição de Liskov)
 
-I – Interface Segregation Principle (Princípio da Segregação de Interfaces)
 
-D – Dependency Inversion Principle (Princípio da Inversão de Dependências)
 
-Esses princípios orientam soluções que não só resolvem problemas, mas também facilitam a manutenção e evolução do software ao longo do tempo.
 
-Aplicar os princípios SOLID ajuda a evitar sistemas com código difícil de modificar, reduzindo riscos e custos em manutenções futuras.
-
-Eles são essenciais para lidar com a mudança frequente de requisitos e tecnologias em projetos de software.
 
