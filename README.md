@@ -60,7 +60,12 @@ D dependency Inversion Principle
 - Princípio de Demeter - O Princípio de Demeter, ou Lei do Menor Conhecimento, recomenda que um método só deve chamar métodos de sua própria classe, de objetos passados como parâmetro, de objetos que cria, ou de seus atributos, evitando chamar métodos em objetos obtidos por chamadas encadeadas.
 - Princípio Aberto/Fechado - O Princípio Aberto/Fechado diz que classes devem permitir extensões sem que seu código original precise ser modificado. Isso facilita a manutenção e a evolução do software, como no caso da classe Collections do Java, que permite diferentes formas de ordenação sem alterar seu código. Já códigos que exigem mudanças para cada novo tipo violam esse princípio.
 - Princípio de Substituição de Liskov - O Princípio de Substituição de Liskov estabelece que subclasses devem poder substituir suas classes base sem alterar o comportamento esperado dos métodos herdados. Ou seja, métodos redefinidos nas subclasses devem respeitar o contrato original da classe base para garantir que clientes que usam objetos da classe base funcionem corretamente também com objetos das subclasses. Violações ocorrem quando, por exemplo, uma subclasse restringe o domínio de um método ou altera sua semântica, como no caso em que uma soma de inteiros é substituída por uma concatenação de strings, causando resultados inesperados e quebrando a previsibilidade do código.
-  
+
+---
+
+## Aula 18/08
+
+### Padrões de Projeto
 
 
 
