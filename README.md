@@ -66,6 +66,27 @@ D dependency Inversion Principle
 ## Aula 18/08
 
 ### Padrões de Projeto
+Vscode
+
+---
+
+## Aula 28/08
+
+### Características da arquitetura
+
+Característiicas de arquitetura = requisitos não funcionais.
+
+Características: Disponibilidade, confiabilidade, testibilidade, escalabilidade, segurança (maior prioridade, pois compromete o site e as informações dos clientes), agilidade, tolerância e falhas, elasticidade, recuperabilidade, desempenho, implementabilidade e capazidade e aprendizagem.
+
+### Princípios do Design
+
+Sempre que possível, utilize a mensageria assíncrona entre os serviços para aumentar o desempenho.
+
+### Decisões da Arquitetura
+
+Decisões da Aquitetura são regras para construir sistemas. As decisões definem qual modelo será usado para a construção do sistema.
+
+microserviço - reduzir o acoplamento (quanto uma parte depende de outra/está acoplada a outra)
 
 
 
