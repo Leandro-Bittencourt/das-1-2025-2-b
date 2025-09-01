@@ -80,15 +80,51 @@ Características: Disponibilidade, confiabilidade, testibilidade, escalabilidade
 
 ### Princípios do Design
 
+Regras básicas a serem seguidas para não perder o padrão.
+
 Sempre que possível, utilize a mensageria assíncrona entre os serviços para aumentar o desempenho.
 
 ### Decisões da Arquitetura
 
-Decisões da Aquitetura são regras para construir sistemas. As decisões definem qual modelo será usado para a construção do sistema.
+Decisões da Aquitetura são regras para construir sistemas. As decisões definem qual modelo (padrão) será usado para a construção do sistema.
 
 microserviço - reduzir o acoplamento (quanto uma parte depende de outra/está acoplada a outra)
 
+---
 
+## Aula 01/09
+
+### Expectativas de um Arquiteto
+
+- Tomar decisões da arquiteutra - tomar as melhores decisões para ter um sistema melhor.
+- Necessita manter continuamente a arquitetura, para manter ela adequada.
+- Mante-lá sempre atualizada, de acordo com as novas tendências. Como ele vai trazer valor para a empresa?
+- Ter conhecimento sobre o negócio, qual o objetivo da empresa, desafios.
+- Exposição e experiência diversificada, ele deve ter passado por várias empresas.
+- Deve ter um pé na liderança.
+- Ter habilidades interpessoais.
+- Entender e lidar bem com questões políticas.
+
+### Tomar decisões da arquitetura.
+- Orientação é a palavra chave, ele deve orientar, ajudar para um bom andamento da empresa.
+- "Framework reativo para o desenvolvimento web front-end", ele deve escutar a equipe também, pois ninguém sabe tudo, as vezes os programadores tem ideias de ouro.
+
+### Analisar continuamente a arquitetura
+- Um arquiteto deve analisar continuamente a arquitetura e o ambiente de tecnologia atual, para então recomendar soluções de melhorias.
+- Refere-se a vitalidade da empresa.
+
+### Manter-se atualizado com as últimas tendências.
+- Um Arquiteto precisa se manter atualizado das últimas tendências da tecnologia e do setor.
+
+
+### Assegurar a conformidade das decisões
+- Um Arquiteto precisa ter formas de garantir que o sistema será desenvolvido do jeito que ele projetou.
+- Ele tenta manter a padronização do sistema.
+- Análise estática de código. (rodar pelo código buscando quebras de padrão)
+
+
+### Ter habilidades interpessoais
+- Um arquiteto deve ter habilidades interpessoais, saber trabalhar em grupo.
 
 
 
