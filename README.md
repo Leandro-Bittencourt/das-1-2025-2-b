@@ -126,6 +126,22 @@ microserviço - reduzir o acoplamento (quanto uma parte depende de outra/está a
 ### Ter habilidades interpessoais
 - Um arquiteto deve ter habilidades interpessoais, saber trabalhar em grupo.
 
+---
 
+## Aula 04/09
 
+### Resuma a diferençca entre: Arquitetura e Design
 
+### Arquitetura
+- Decisões mais importantes e de alto nível que definem a estrutura básica do sistema. É quando você pensa nas principais partes que ele vai ter, como elas vão se conectar e quais padrões vão garantir que o sistema funcione bem, seja rápido, seguro e fácil de manter. Essas decisões têm impacto direto no sucesso do sistema lá na frente, a longo prazo. Além disso, a arquitetura está bem ligada ao que o negócio precisa e às qualidades que o sistema deve ter.
+
+### Design
+- Decisões mais detalhadas e práticas, aquelas que mostram como as partes que a arquitetura definiu vão ser realmente construídas. Aqui, o foco está em organizar o código, escolher as classes, os algoritmos, e resolver problemas específicos do dia a dia do desenvolvimento. O design é mais imediato, é o que faz a arquitetura sair do papel e virar realidade.
+
+### Conclusão
+
+Resumindo, a arquitetura é como o mapa geral da cidade, ela define onde ficam as ruas principais, os bairros e as conexões entre eles. O design, por sua vez, é o detalhe das construções e dos interiores das casas e prédios. A arquitetura responde ao “o que” e “por que” do sistema, enquanto o design responde ao “como” colocar tudo isso em prática. Os dois são essenciais e trabalham juntos para garantir que o software funcione bem e atenda às necessidades de todos.
+
+### Como é a formação do conhecimento de um arquiteto modelo T?
+
+O arquiteto modelo T possui um conhecimento profundo em uma área técnica específica, que é sua especialidade. Ao mesmo tempo, ele tem uma visão ampla e geral sobre outras tecnologias, práticas e aspectos relacionados ao desenvolvimento de software. Essa combinação permite que ele tome decisões técnicas sólidas e, ao mesmo tempo, compreenda o contexto mais amplo do projeto, facilitando a comunicação e a colaboração com diferentes equipes.
