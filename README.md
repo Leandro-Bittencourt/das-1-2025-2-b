@@ -66,9 +66,105 @@ D dependency Inversion Principle
 ## Aula 18/08
 
 ### Padrões de Projeto
+Vscode
+
+---
+
+## Aula 28/08
+
+### Características da arquitetura
+
+Característiicas de arquitetura = requisitos não funcionais.
+
+Características: Disponibilidade, confiabilidade, testibilidade, escalabilidade, segurança (maior prioridade, pois compromete o site e as informações dos clientes), agilidade, tolerância e falhas, elasticidade, recuperabilidade, desempenho, implementabilidade e capazidade e aprendizagem.
+
+### Princípios do Design
+
+Regras básicas a serem seguidas para não perder o padrão.
+
+Sempre que possível, utilize a mensageria assíncrona entre os serviços para aumentar o desempenho.
+
+### Decisões da Arquitetura
+
+Decisões da Aquitetura são regras para construir sistemas. As decisões definem qual modelo (padrão) será usado para a construção do sistema.
+
+microserviço - reduzir o acoplamento (quanto uma parte depende de outra/está acoplada a outra)
+
+---
+
+## Aula 01/09
+
+### Expectativas de um Arquiteto
+
+- Tomar decisões da arquiteutra - tomar as melhores decisões para ter um sistema melhor.
+- Necessita manter continuamente a arquitetura, para manter ela adequada.
+- Mante-lá sempre atualizada, de acordo com as novas tendências. Como ele vai trazer valor para a empresa?
+- Ter conhecimento sobre o negócio, qual o objetivo da empresa, desafios.
+- Exposição e experiência diversificada, ele deve ter passado por várias empresas.
+- Deve ter um pé na liderança.
+- Ter habilidades interpessoais.
+- Entender e lidar bem com questões políticas.
+
+### Tomar decisões da arquitetura.
+- Orientação é a palavra chave, ele deve orientar, ajudar para um bom andamento da empresa.
+- "Framework reativo para o desenvolvimento web front-end", ele deve escutar a equipe também, pois ninguém sabe tudo, as vezes os programadores tem ideias de ouro.
+
+### Analisar continuamente a arquitetura
+- Um arquiteto deve analisar continuamente a arquitetura e o ambiente de tecnologia atual, para então recomendar soluções de melhorias.
+- Refere-se a vitalidade da empresa.
+
+### Manter-se atualizado com as últimas tendências.
+- Um Arquiteto precisa se manter atualizado das últimas tendências da tecnologia e do setor.
 
 
+### Assegurar a conformidade das decisões
+- Um Arquiteto precisa ter formas de garantir que o sistema será desenvolvido do jeito que ele projetou.
+- Ele tenta manter a padronização do sistema.
+- Análise estática de código. (rodar pelo código buscando quebras de padrão)
 
 
+### Ter habilidades interpessoais
+- Um arquiteto deve ter habilidades interpessoais, saber trabalhar em grupo.
 
+---
 
+## Aula 04/09
+
+### Resuma a diferençca entre: Arquitetura e Design
+
+### Arquitetura
+- Decisões mais importantes e de alto nível que definem a estrutura básica do sistema. É quando você pensa nas principais partes que ele vai ter, como elas vão se conectar e quais padrões vão garantir que o sistema funcione bem, seja rápido, seguro e fácil de manter. Essas decisões têm impacto direto no sucesso do sistema lá na frente, a longo prazo. Além disso, a arquitetura está bem ligada ao que o negócio precisa e às qualidades que o sistema deve ter.
+
+### Design
+- Decisões mais detalhadas e práticas, aquelas que mostram como as partes que a arquitetura definiu vão ser realmente construídas. Aqui, o foco está em organizar o código, escolher as classes, os algoritmos, e resolver problemas específicos do dia a dia do desenvolvimento. O design é mais imediato, é o que faz a arquitetura sair do papel e virar realidade.
+
+### Conclusão
+
+Resumindo, a arquitetura é como o mapa geral da cidade, ela define onde ficam as ruas principais, os bairros e as conexões entre eles. O design, por sua vez, é o detalhe das construções e dos interiores das casas e prédios. A arquitetura responde ao “o que” e “por que” do sistema, enquanto o design responde ao “como” colocar tudo isso em prática. Os dois são essenciais e trabalham juntos para garantir que o software funcione bem e atenda às necessidades de todos.
+
+### Como é a formação do conhecimento de um arquiteto modelo T?
+
+O arquiteto modelo T possui um conhecimento profundo em uma área técnica específica, que é sua especialidade. Ao mesmo tempo, ele tem uma visão ampla e geral sobre outras tecnologias, práticas e aspectos relacionados ao desenvolvimento de software. Essa combinação permite que ele tome decisões técnicas sólidas e, ao mesmo tempo, compreenda o contexto mais amplo do projeto, facilitando a comunicação e a colaboração com diferentes equipes.
+
+---
+
+## Aula 08/09
+
+### Trade-off
+- Trade-off refere-se à necessidade de equilibrar decisões conflitantes, onde melhorar um aspecto geralmente implica sacrificar outro. Por exemplo, priorizar desempenho pode comprometer a manutenibilidade do código, ou optar por uma arquitetura altamente modular pode aumentar a complexidade e o custo de desenvolvimento. Arquitetos de software precisam constantemente avaliar os impactos de suas escolhas, considerando critérios como escalabilidade, segurança, custo, tempo de entrega e experiência do usuário, buscando a melhor solução possível dentro das restrições do projeto.
+
+## Mecanismo de Tópico
+- O mecanismo de tópico é uma estratégia utilizada principalmente em sistemas de comunicação assíncrona, como os baseados em arquitetura publish/subscribe, para organizar e distribuir mensagens entre diferentes componentes de forma desacoplada. Nesse modelo, as mensagens são categorizadas por "tópicos", permitindo que produtores publiquem informações em um canal específico, enquanto consumidores se inscrevem apenas nos tópicos de seu interesse. Isso promove um alto grau de modularidade e escalabilidade, já que os emissores e receptores de mensagens não precisam conhecer diretamente uns aos outros, tornando o sistema mais flexível e fácil de evoluir ou manter. (Mensagem de 1 para N)
+- Menor acoplamento, 1 mensagem que supra todos.
+- Extensibilidade arquitetural
+
+- DESVANTAGENS
+- Acesso a dados e preocupações com a segurança dos dados
+- Nenhum contrato heterogêneo
+
+## Mecanismo de Fila
+- O mecanismo de fila funciona com base em duas operações fundamentais: enqueue e dequeue. A operação de enqueue consiste em adicionar um novo elemento ao final da fila, colocando-o na ordem para ser processado. Já a operação de dequeue remove o elemento que está no início da fila, ou seja, o primeiro que entrou, respeitando a lógica FIFO (First In, First Out). Esse comportamento garante que os dados ou tarefas sejam processados na mesma ordem em que foram recebidos, o que é essencial para manter a consistência e previsibilidade em sistemas assíncronos. Juntas, essas operações permitem o gerenciamento eficiente do fluxo de mensagens entre componentes produtores e consumidores, mesmo quando operam em ritmos diferentes. (Mensagem de 1 para 1)
+- Maior acoplamento, consegue diminuir a mensagem para mandar apenas a informação que cada um precisa.
+
+## Buffer
+- Buffer é uma estrutura que combina características de fila e tópico em sistemas de mensagens: ele possui um tópico que envia a mesma mensagem para múltiplos consumidores, mas antes de cada consumidor há uma fila exclusiva que armazena as mensagens na ordem de chegada. Dessa forma, o buffer funciona como uma área intermediária que armazena temporariamente os dados para equilibrar a produção e o consumo, garantindo que cada consumidor possa processar suas mensagens independentemente e que, mesmo se um consumidor ficar offline, ele continuará recebendo as mensagens armazenadas em sua fila assim que voltar.
