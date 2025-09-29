@@ -126,6 +126,11 @@ microserviço - reduzir o acoplamento (quanto uma parte depende de outra/está a
 ### Ter habilidades interpessoais
 - Um arquiteto deve ter habilidades interpessoais, saber trabalhar em grupo.
 
+
+### DevOps
+- DevOps é uma abordagem moderna de engenharia de software que integra as equipes de desenvolvimento (Dev) e operações (Ops) para melhorar a colaboração, acelerar entregas e aumentar a qualidade dos sistemas. Em vez de trabalharem isoladamente, essas equipes adotam processos colaborativos, ferramentas compartilhadas e automação para promover a integração contínua (CI), entrega contínua (CD) e monitoramento constante. O objetivo é reduzir o tempo entre a ideia e a implementação em produção, garantindo maior agilidade na resposta a mudanças de mercado e feedback dos usuários. DevOps também promove uma cultura de melhoria contínua, onde os times aprendem com cada ciclo de entrega, ajustando processos e fortalecendo a confiabilidade, segurança e eficiência das soluções entregues. Além disso, incentiva a responsabilização coletiva, comunicação aberta e uso de métricas para tomada de decisões orientadas por dados.
+
+
 ---
 
 ## Aula 04/09
