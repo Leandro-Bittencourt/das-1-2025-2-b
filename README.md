@@ -179,7 +179,7 @@ O arquiteto modelo T possui um conhecimento profundo em uma área técnica espec
 ## Aula 06/10
 Características da Arquitetura: São requisitos não relacionados diretamente à funcionalidade, mas essenciais para o sucesso do sistema. Como o Desepenho, segurança, escalabilidade, manutenibilidade.
 
-###Classificação das Características da Arquitetura
+### Classificação das Características da Arquitetura
 As características são organizadas em três grandes categorias:
 
 Operacionais: Essas características estão diretamente ligadas a práticas de DevOps e infraestrutura.
