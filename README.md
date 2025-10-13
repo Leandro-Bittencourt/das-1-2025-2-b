@@ -189,3 +189,23 @@ Transversais: Essas características são frequentemente críticas em setores re
 Características da arquitetura conflitam entre si exemplo: segurança x desempenho
 
 O arquiteto deve equilibrar as escolhas buscando a arquitetura mais adequada ao contexto.
+
+---
+
+## Aula 09/10
+
+### Circuit Breaker Pattern
+O padrão Circuit Breaker é utilizado para aumentar a resiliência de aplicações distribuídas. Ele funciona como um "disjuntor", interrompendo temporariamente chamadas a um serviço externo quando são detectadas muitas falhas consecutivas. Isso evita sobrecarga no sistema e dá tempo para o serviço se recuperar. O circuito pode estar em três estados: Fechado (opera normalmente, mas monitora falhas), Aberto (bloqueia chamadas por um tempo) e Meio-Aberto (permite algumas chamadas de teste para verificar se o serviço voltou ao normal).
+
+### Definições das características arquiteturais
+As características arquiteturais são aspectos não funcionais que influenciam diretamente a forma como o sistema se comporta e atende aos requisitos de qualidade, como desempenho, segurança, escalabilidade e manutenibilidade. Elas são fundamentais no momento de tomar decisões de arquitetura e design, pois ajudam a definir quais tecnologias, padrões e estratégias serão mais adequados para garantir a eficiência e a confiabilidade do software. Ao entender e aplicar essas características, consigo projetar sistemas mais robustos e preparados para crescer e se adaptar com o tempo.
+
+---
+
+## Aula 13/10
+
+### CQRS Pattern
+CQRS (Command Query Responsibility Segregation) é um padrão de arquitetura que separa claramente operações de leitura (queries) e escrita (commands) sobre os dados de um sistema. Em vez de usar um único modelo para tudo — inserir, atualizar, consultar — aplica-se um modelo para cada responsabilidade: o modelo de escrita cuida da lógica de negócio, consistência e validações necessárias, enquanto o modelo de leitura é otimizado para retornar dados de forma eficiente, geralmente com DTOs ou projeções que servem bem para a interface de usuário. Essa separação permite escalar cada parte de forma independente, usar diferentes esquemas ou até diferentes bancos de dados para leitura e escrita, bem como melhorar segurança, clareza de código e desempenho. No entanto, nem sempre é a melhor solução: CQRS adiciona complexidade, requer lidar com sincronização entre modelos (por exemplo, consistência eventual) e possíveis desafios em mensageria ou versionamento. Em contextos onde há muitas leituras versus escritas, ou regras de negócio complexas que exigem uma lógica mais estruturada, CQRS costuma ser uma escolha valiosa.
+
+### Fundamentos dos Padrões de Arquiteturas
+Os fundamentos dos padrões de arquitetura envolvem princípios e práticas que orientam a estruturação de sistemas de software para garantir que eles sejam robustos, escaláveis, manuteníveis e alinhados aos requisitos de negócio. Esses padrões oferecem soluções testadas para problemas recorrentes na organização dos componentes, comunicação entre módulos, gerenciamento de dados e integração com outros sistemas. Entender esses fundamentos me permite aplicar padrões como camadas, microservices, event-driven ou CQRS de forma consciente, escolhendo a abordagem que melhor equilibra qualidade, desempenho e complexidade. Além disso, os padrões ajudam a promover consistência no desenvolvimento, facilitando a colaboração entre equipes e a evolução sustentável do software ao longo do tempo.
