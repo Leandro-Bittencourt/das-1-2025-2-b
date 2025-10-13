@@ -174,6 +174,8 @@ O arquiteto modelo T possui um conhecimento profundo em uma área técnica espec
 ### Buffer
 - Buffer é uma estrutura que combina características de fila e tópico em sistemas de mensagens: ele possui um tópico que envia a mesma mensagem para múltiplos consumidores, mas antes de cada consumidor há uma fila exclusiva que armazena as mensagens na ordem de chegada. Dessa forma, o buffer funciona como uma área intermediária que armazena temporariamente os dados para equilibrar a produção e o consumo, garantindo que cada consumidor possa processar suas mensagens independentemente e que, mesmo se um consumidor ficar offline, ele continuará recebendo as mensagens armazenadas em sua fila assim que voltar.
 
+---
+
 ## Aula 06/10
 Características da Arquitetura: São requisitos não relacionados diretamente à funcionalidade, mas essenciais para o sucesso do sistema. Como o Desepenho, segurança, escalabilidade, manutenibilidade.
 
