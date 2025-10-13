@@ -158,7 +158,7 @@ O arquiteto modelo T possui um conhecimento profundo em uma área técnica espec
 ### Trade-off
 - Trade-off refere-se à necessidade de equilibrar decisões conflitantes, onde melhorar um aspecto geralmente implica sacrificar outro. Por exemplo, priorizar desempenho pode comprometer a manutenibilidade do código, ou optar por uma arquitetura altamente modular pode aumentar a complexidade e o custo de desenvolvimento. Arquitetos de software precisam constantemente avaliar os impactos de suas escolhas, considerando critérios como escalabilidade, segurança, custo, tempo de entrega e experiência do usuário, buscando a melhor solução possível dentro das restrições do projeto.
 
-## Mecanismo de Tópico
+### Mecanismo de Tópico
 - O mecanismo de tópico é uma estratégia utilizada principalmente em sistemas de comunicação assíncrona, como os baseados em arquitetura publish/subscribe, para organizar e distribuir mensagens entre diferentes componentes de forma desacoplada. Nesse modelo, as mensagens são categorizadas por "tópicos", permitindo que produtores publiquem informações em um canal específico, enquanto consumidores se inscrevem apenas nos tópicos de seu interesse. Isso promove um alto grau de modularidade e escalabilidade, já que os emissores e receptores de mensagens não precisam conhecer diretamente uns aos outros, tornando o sistema mais flexível e fácil de evoluir ou manter. (Mensagem de 1 para N)
 - Menor acoplamento, 1 mensagem que supra todos.
 - Extensibilidade arquitetural
@@ -167,9 +167,23 @@ O arquiteto modelo T possui um conhecimento profundo em uma área técnica espec
 - Acesso a dados e preocupações com a segurança dos dados
 - Nenhum contrato heterogêneo
 
-## Mecanismo de Fila
+### Mecanismo de Fila
 - O mecanismo de fila funciona com base em duas operações fundamentais: enqueue e dequeue. A operação de enqueue consiste em adicionar um novo elemento ao final da fila, colocando-o na ordem para ser processado. Já a operação de dequeue remove o elemento que está no início da fila, ou seja, o primeiro que entrou, respeitando a lógica FIFO (First In, First Out). Esse comportamento garante que os dados ou tarefas sejam processados na mesma ordem em que foram recebidos, o que é essencial para manter a consistência e previsibilidade em sistemas assíncronos. Juntas, essas operações permitem o gerenciamento eficiente do fluxo de mensagens entre componentes produtores e consumidores, mesmo quando operam em ritmos diferentes. (Mensagem de 1 para 1)
 - Maior acoplamento, consegue diminuir a mensagem para mandar apenas a informação que cada um precisa.
 
-## Buffer
+### Buffer
 - Buffer é uma estrutura que combina características de fila e tópico em sistemas de mensagens: ele possui um tópico que envia a mesma mensagem para múltiplos consumidores, mas antes de cada consumidor há uma fila exclusiva que armazena as mensagens na ordem de chegada. Dessa forma, o buffer funciona como uma área intermediária que armazena temporariamente os dados para equilibrar a produção e o consumo, garantindo que cada consumidor possa processar suas mensagens independentemente e que, mesmo se um consumidor ficar offline, ele continuará recebendo as mensagens armazenadas em sua fila assim que voltar.
+
+## Aula 06/10
+Características da Arquitetura: São requisitos não relacionados diretamente à funcionalidade, mas essenciais para o sucesso do sistema. Como o Desepenho, segurança, escalabilidade, manutenibilidade.
+
+###Classificação das Características da Arquitetura
+As características são organizadas em três grandes categorias:
+
+Operacionais: Essas características estão diretamente ligadas a práticas de DevOps e infraestrutura.
+Estruturais: São cruciais para escalabilidade técnica, qualidade e ciclo de vida do sistema e Relacionam-se à qualidade do código, modularidade e manutenção.
+Transversais: Essas características são frequentemente críticas em setores regulados, como financeiro, saúde, governo, etc. São restrições ou requisitos amplos, que não se encaixam nas outras categorias.
+###Trade-offs e Compensações
+Características da arquitetura conflitam entre si exemplo: segurança x desempenho
+
+O arquiteto deve equilibrar as escolhas buscando a arquitetura mais adequada ao contexto.
