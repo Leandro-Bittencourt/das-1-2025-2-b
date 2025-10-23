@@ -208,4 +208,29 @@ As características arquiteturais são aspectos não funcionais que influenciam 
 CQRS (Command Query Responsibility Segregation) é um padrão de arquitetura que separa claramente operações de leitura (queries) e escrita (commands) sobre os dados de um sistema. Em vez de usar um único modelo para tudo — inserir, atualizar, consultar — aplica-se um modelo para cada responsabilidade: o modelo de escrita cuida da lógica de negócio, consistência e validações necessárias, enquanto o modelo de leitura é otimizado para retornar dados de forma eficiente, geralmente com DTOs ou projeções que servem bem para a interface de usuário. Essa separação permite escalar cada parte de forma independente, usar diferentes esquemas ou até diferentes bancos de dados para leitura e escrita, bem como melhorar segurança, clareza de código e desempenho. No entanto, nem sempre é a melhor solução: CQRS adiciona complexidade, requer lidar com sincronização entre modelos (por exemplo, consistência eventual) e possíveis desafios em mensageria ou versionamento. Em contextos onde há muitas leituras versus escritas, ou regras de negócio complexas que exigem uma lógica mais estruturada, CQRS costuma ser uma escolha valiosa.
 
 ### Fundamentos dos Padrões de Arquiteturas
-Os fundamentos dos padrões de arquitetura envolvem princípios e práticas que orientam a estruturação de sistemas de software para garantir que eles sejam robustos, escaláveis, manuteníveis e alinhados aos requisitos de negócio. Esses padrões oferecem soluções testadas para problemas recorrentes na organização dos componentes, comunicação entre módulos, gerenciamento de dados e integração com outros sistemas. Entender esses fundamentos me permite aplicar padrões como camadas, microservices, event-driven ou CQRS de forma consciente, escolhendo a abordagem que melhor equilibra qualidade, desempenho e complexidade. Além disso, os padrões ajudam a promover consistência no desenvolvimento, facilitando a colaboração entre equipes e a evolução sustentável do software ao longo do tempo.
+O CQRS Pattern (Command and Query Responsibility Segregation) se baseia no princípio de separar responsabilidades entre operações de leitura (Query) e escrita (Command), buscando melhor desempenho, escalabilidade e consistência em sistemas complexos. Esse padrão segue fundamentos de arquitetura distribuída e design orientado a domínio, permitindo que cada parte do sistema seja otimizada de forma independente. Ao isolar comandos e consultas, o CQRS facilita o uso de diferentes modelos de dados e possibilita maior flexibilidade e resiliência, alinhando-se aos princípios arquiteturais de manutenibilidade, escalabilidade e eficiência em aplicações corporativas e baseadas em nuvem.
+
+---
+
+## Aula 16/10
+
+### Retry Pattern
+O Retry Pattern é um padrão de resiliência usado para lidar com falhas temporárias em operações que dependem de serviços externos, como APIs ou bancos de dados. Em vez de falhar imediatamente, o sistema tenta novamente após um intervalo de tempo, aumentando as chances de sucesso caso o problema seja momentâneo. Por exemplo, uma instabilidade de rede ou um serviço temporariamente indisponível.
+
+Esse padrão deve ser aplicado com cuidado, garantindo que as operações sejam idempotentes (sem efeitos colaterais ao repetir) e que apenas erros transitórios gerem novas tentativas. Também é importante limitar o número de retries e usar estratégias como exponential backoff para evitar sobrecarga. Quando bem implementado, o Retry Pattern torna as aplicações mais robustas e estáveis, reduzindo falhas perceptíveis ao usuário.
+
+### Fundamentos dos Padrões de Arquiteturas
+O **Retry Pattern** se fundamenta nos princípios de **resiliência e tolerância a falhas**, que são bases dos **padrões de arquitetura de software**. Ele aplica o conceito de que falhas em sistemas distribuídos são inevitáveis, mas muitas vezes temporárias, permitindo que o sistema **se recupere automaticamente** ao repetir operações que falharam de forma transitória. Assim, o padrão contribui para aumentar a **confiabilidade, disponibilidade e estabilidade** das aplicações, alinhando-se aos fundamentos arquiteturais de **robustez e continuidade de serviço** em ambientes complexos, como os de computação em nuvem.
+
+## Aula 20/10
+
+### Estilo de Arquitetura em Camadas
+O **estilo de arquitetura em camadas** é um dos modelos mais tradicionais e amplamente utilizados no design de software. Ele organiza o sistema em **níveis hierárquicos (camadas)**, onde cada camada possui responsabilidades bem definidas e se comunica apenas com a camada imediatamente acima ou abaixo. Essa separação favorece a **modularidade**, tornando o sistema mais fácil de entender, desenvolver e manter.
+
+Em uma aplicação típica, as camadas mais comuns são: **apresentação (interface com o usuário)**, **negócios (regras e lógica da aplicação)** e **acesso a dados (interação com bancos ou serviços externos)**. Cada camada tem uma função específica — por exemplo, a camada de apresentação lida com entradas e saídas, enquanto a de negócios processa as regras e a de dados realiza consultas ou persistência. Essa estrutura permite **isolamento de responsabilidades**, facilitando a substituição ou atualização de partes do sistema sem afetar o restante.
+
+Entre as principais vantagens desse estilo estão a **facilidade de manutenção**, **reutilização de código** e **testabilidade**. No entanto, ele também pode introduzir **acoplamento e sobrecarga** se mal projetado, especialmente quando há dependência excessiva entre camadas. Mesmo assim, a arquitetura em camadas continua sendo uma das abordagens mais usadas, servindo de base para diversos padrões modernos, como **MVC (Model-View-Controller)** e **Clean Architecture**, que seguem o mesmo princípio de separação de responsabilidades.
+
+
+
+
