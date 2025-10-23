@@ -222,6 +222,8 @@ Esse padrão deve ser aplicado com cuidado, garantindo que as operações sejam 
 ### Fundamentos dos Padrões de Arquiteturas
 O **Retry Pattern** se fundamenta nos princípios de **resiliência e tolerância a falhas**, que são bases dos **padrões de arquitetura de software**. Ele aplica o conceito de que falhas em sistemas distribuídos são inevitáveis, mas muitas vezes temporárias, permitindo que o sistema **se recupere automaticamente** ao repetir operações que falharam de forma transitória. Assim, o padrão contribui para aumentar a **confiabilidade, disponibilidade e estabilidade** das aplicações, alinhando-se aos fundamentos arquiteturais de **robustez e continuidade de serviço** em ambientes complexos, como os de computação em nuvem.
 
+--- 
+
 ## Aula 20/10
 
 ### Estilo de Arquitetura em Camadas
