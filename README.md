@@ -233,6 +233,20 @@ Em uma aplicação típica, as camadas mais comuns são: **apresentação (inter
 
 Entre as principais vantagens desse estilo estão a **facilidade de manutenção**, **reutilização de código** e **testabilidade**. No entanto, ele também pode introduzir **acoplamento e sobrecarga** se mal projetado, especialmente quando há dependência excessiva entre camadas. Mesmo assim, a arquitetura em camadas continua sendo uma das abordagens mais usadas, servindo de base para diversos padrões modernos, como **MVC (Model-View-Controller)** e **Clean Architecture**, que seguem o mesmo princípio de separação de responsabilidades.
 
+---
+
+## Aula 27/10
+
+### Estilo de Arquitetura em Pipeline
+A arquitetura pipeline, também chamada de pipes-and-filters, é um jeito de organizar sistemas de software em etapas que trabalham uma depois da outra, como uma linha de montagem. Cada etapa, chamada de filtro, recebe uma parte dos dados, faz uma tarefa específica e passa o resultado para o próximo filtro por meio de um canal (ou pipe). Esse modelo é muito parecido com o funcionamento dos comandos em shells Unix, como o Bash, e também lembra a forma como as linguagens funcionais trabalham com operações de map e reduce.
+
+Nessa arquitetura, os canais são os responsáveis por transportar os dados entre os filtros. Eles funcionam em uma única direção e conectam apenas dois pontos, o que ajuda a manter o sistema mais simples e rápido. Já os filtros são partes independentes do sistema que fazem apenas uma coisa, o que facilita o entendimento e a manutenção do código. Existem quatro tipos principais de filtros: o produtor, que gera os dados; o transformador, que modifica as informações de alguma forma; o verificador, que testa condições e decide o que fazer com os dados; e o consumidor, que recebe o resultado final e o armazena ou exibe.
+
+Um bom exemplo dessa arquitetura é o processamento de dados de telemetria com o Apache Kafka. Nesse caso, um filtro captura informações dos serviços e as envia para outro filtro que verifica se os dados são sobre o tempo de resposta. Se forem, eles são enviados para um filtro que calcula essa duração. Caso contrário, seguem para outro filtro que trata do tempo de atividade do sistema. No fim, os resultados são enviados para um filtro consumidor que grava tudo em um banco de dados. Essa estrutura é flexível, pois novos filtros podem ser adicionados facilmente, sem precisar alterar os que já existem.
+
+As maiores vantagens da arquitetura pipeline são a simplicidade, o baixo custo de manutenção e a modularidade — ou seja, cada parte é responsável por uma única função e pode ser alterada de forma independente. No entanto, ela também tem limitações. Por ser normalmente monolítica (tudo em um só bloco de software), não é muito boa em escalar ou lidar com falhas. Se uma parte do sistema falhar, todo o pipeline pode parar. Além disso, mesmo que seja fácil de entender, ainda é necessário testar e implantar o sistema inteiro sempre que algo é alterado.
+
+Em resumo, a arquitetura pipeline é ideal para processamentos lineares e sequenciais, em que os dados passam por várias etapas até chegar ao resultado final — como em sistemas de ETL, EDI ou em orquestrações de serviços. É uma escolha que prioriza clareza, simplicidade e organização, mas que não é a melhor opção para aplicações que precisam de alta escalabilidade ou tolerância a falhas.
 
 
 
