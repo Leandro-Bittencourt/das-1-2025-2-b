@@ -2,10 +2,17 @@
     "configurations": [
         {
             "type": "java",
-            "name": "Publisher",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "br.univille.Main",
+            "projectName": "pipeline",
+            "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Launch Java Program",
             "request": "launch",
             "mainClass": "",
-            "projectName": "eventos",
             "envFile": "${workspaceFolder}/.env"
         }
     ]
