@@ -248,5 +248,18 @@ As maiores vantagens da arquitetura pipeline são a simplicidade, o baixo custo 
 
 Em resumo, a arquitetura pipeline é ideal para processamentos lineares e sequenciais, em que os dados passam por várias etapas até chegar ao resultado final — como em sistemas de ETL, EDI ou em orquestrações de serviços. É uma escolha que prioriza clareza, simplicidade e organização, mas que não é a melhor opção para aplicações que precisam de alta escalabilidade ou tolerância a falhas.
 
+---
+
+## Aula 10/11
+
+### Arquitetura de Microsserviços
+
+A arquitetura de microsserviços é um estilo de design de software que organiza um sistema como um conjunto de serviços pequenos, independentes e executáveis de forma autônoma. Cada serviço é responsável por uma função de negócio específica e se comunica com os demais por meio de APIs leves, geralmente via HTTP/REST ou mensageria.
+
+Esse modelo surge como uma evolução da arquitetura monolítica, oferecendo maior flexibilidade, escalabilidade e resiliência. Cada microsserviço pode ser desenvolvido, implantado e escalado de forma independente, permitindo ciclos de entrega mais rápidos e uma adaptação mais ágil às mudanças de requisitos.
+
+Entre os principais benefícios estão a facilidade de manutenção, a escolha livre de tecnologias (polyglot architecture), a escalabilidade horizontal e a tolerância a falhas — já que a falha de um serviço não compromete todo o sistema. No entanto, também traz desafios, como a complexidade na orquestração, monitoramento, segurança distribuída e gestão de dados entre múltiplos serviços.
+
+Para funcionar bem, uma arquitetura de microsserviços depende de boas práticas de automação, observabilidade, CI/CD, containerização (Docker) e orquestração (Kubernetes). Além disso, o design de fronteiras de serviço e a governança de APIs são fundamentais para garantir coesão e evitar acoplamento indesejado.
 
 
